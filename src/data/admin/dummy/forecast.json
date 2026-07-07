@@ -1,0 +1,23 @@
+[
+  { "date": "2024-11-14", "revenue": 198000, "demand": 0.62, "adr": 7200, "occupancy": 58 },
+  { "date": "2024-11-15", "revenue": 215000, "demand": 0.68, "adr": 7400, "occupancy": 62 },
+  { "date": "2024-11-16", "revenue": 232000, "demand": 0.75, "adr": 7600, "occupancy": 68 },
+  { "date": "2024-11-17", "revenue": 268000, "demand": 0.82, "adr": 8200, "occupancy": 78 },
+  { "date": "2024-11-18", "revenue": 285000, "demand": 0.88, "adr": 8500, "occupancy": 82 },
+  { "date": "2024-11-19", "revenue": 245000, "demand": 0.72, "adr": 7800, "occupancy": 67 },
+  { "date": "2024-11-20", "revenue": 228000, "demand": 0.65, "adr": 7500, "occupancy": 63 },
+  { "date": "2024-11-21", "revenue": 212000, "demand": 0.58, "adr": 7300, "occupancy": 55 },
+  { "date": "2024-11-22", "revenue": 265000, "demand": 0.85, "adr": 8400, "occupancy": 80 },
+  { "date": "2024-11-23", "revenue": 298000, "demand": 0.92, "adr": 9200, "occupancy": 88 },
+  { "date": "2024-11-24", "revenue": 315000, "demand": 0.95, "adr": 9500, "occupancy": 92 },
+  { "date": "2024-11-25", "revenue": 275000, "demand": 0.78, "adr": 8100, "occupancy": 74 },
+  { "date": "2024-11-26", "revenue": 248000, "demand": 0.68, "adr": 7700, "occupancy": 65 },
+  { "date": "2024-11-27", "revenue": 235000, "demand": 0.62, "adr": 7500, "occupancy": 60 },
+  { "date": "2024-11-28", "revenue": 320000, "demand": 0.96, "adr": 9800, "occupancy": 94 },
+  { "date": "2024-11-29", "revenue": 345000, "demand": 0.98, "adr": 10200, "occupancy": 96 },
+  { "date": "2024-11-30", "revenue": 338000, "demand": 0.94, "adr": 9900, "occupancy": 92 },
+  { "date": "2024-12-01", "revenue": 295000, "demand": 0.85, "adr": 8800, "occupancy": 82 },
+  { "date": "2024-12-02", "revenue": 258000, "demand": 0.72, "adr": 8000, "occupancy": 70 },
+  { "date": "2024-12-03", "revenue": 242000, "demand": 0.65, "adr": 7600, "occupancy": 64 },
+  { "date": "2024-12-04", "revenue": 225000, "demand": 0.58, "adr": 7400, "occupancy": 58 }
+]

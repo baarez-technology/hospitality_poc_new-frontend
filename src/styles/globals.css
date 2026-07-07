@@ -1,0 +1,789 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 9% 96%;
+    --foreground: 24 10% 10%;
+    --card: 36 9% 100%;
+    --card-foreground: 24 10% 10%;
+    --popover: 36 9% 100%;
+    --popover-foreground: 24 10% 10%;
+    --primary: 18 27% 52%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 31 44% 51%;
+    --secondary-foreground: 24 10% 15%;
+    --muted: 36 6% 90%;
+    --muted-foreground: 24 10% 45%;
+    --accent: 42 55% 63%;
+    --accent-foreground: 24 10% 15%;
+    --destructive: 0 42% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 36 6% 80%;
+    --input: 36 6% 80%;
+    --ring: 18 27% 52%;
+    --radius: 0.5rem;
+
+    /* Glimmora Brand CSS Variables for Button Component */
+    --brand-primary: #A57865;
+    --brand-primary-hover: #8B6450;
+    --brand-primary-light: #FAF8F6;
+    --brand-primary-45: rgba(165, 120, 101, 0.1);
+
+    --brand-accent: #5C9BA4;
+    --brand-accent-hover: #4B8088;
+    --brand-accent-light: #F2F7F8;
+    --brand-accent-50: rgba(92, 155, 164, 0.1);
+
+    /* Border radius tokens */
+    --brand-radius-sm: 0.375rem;
+    --brand-radius-md: 0.5rem;
+    --brand-radius-lg: 0.75rem;
+    --brand-radius-xl: 1rem;
+  }
+
+  .dark {
+    --background: 30 10% 7%;
+    --foreground: 30 6% 92%;
+    --card: 30 10% 10%;
+    --card-foreground: 30 6% 92%;
+    --popover: 30 10% 10%;
+    --popover-foreground: 30 6% 92%;
+    --primary: 18 27% 52%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 31 30% 38%;
+    --secondary-foreground: 30 6% 92%;
+    --muted: 30 10% 20%;
+    --muted-foreground: 30 6% 70%;
+    --accent: 18 27% 25%;
+    --accent-foreground: 30 6% 92%;
+    --destructive: 0 45% 46%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 10% 20%;
+    --input: 30 10% 20%;
+    --ring: 18 27% 52%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-[#F5F3F0] text-neutral-900 font-sans antialiased;
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    min-height: 100vh;
+    background: #F5F3F0;
+  }
+}
+
+@layer utilities {
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-lg;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-aurora-gradient;
+  }
+
+  /* Custom Scrollbar - Auto-hide */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+
+  .custom-scrollbar:hover {
+    scrollbar-color: #C8B29D transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    @apply rounded-full;
+    transition: background-color 0.3s ease;
+  }
+
+  .custom-scrollbar:hover::-webkit-scrollbar-thumb {
+    background-color: #C8B29D;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #A57865;
+  }
+
+  /* Table Scrollbar - Beige Theme - Auto-hide */
+  .table-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+
+  .table-scrollbar:hover {
+    scrollbar-color: #D4C8BC transparent;
+  }
+
+  .table-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .table-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent rounded-full;
+  }
+
+  .table-scrollbar::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    @apply rounded-full;
+    transition: background-color 0.3s ease;
+  }
+
+  .table-scrollbar:hover::-webkit-scrollbar-thumb {
+    background-color: #D4C8BC;
+  }
+
+  .table-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #C8B29D;
+  }
+
+  /* Hide scrollbar completely */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Sidebar specific scrollbar - Auto-hide */
+  .sidebar-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+
+  .sidebar-scrollbar:hover {
+    scrollbar-color: rgba(165, 120, 101, 0.4) transparent;
+  }
+
+  .sidebar-scrollbar::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .sidebar-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .sidebar-scrollbar::-webkit-scrollbar-thumb {
+    background: transparent;
+    @apply rounded-full;
+    transition: background 0.3s ease;
+  }
+
+  .sidebar-scrollbar:hover::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, rgba(165, 120, 101, 0.4), rgba(139, 94, 79, 0.4));
+  }
+
+  .sidebar-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, rgba(165, 120, 101, 0.7), rgba(139, 94, 79, 0.7));
+  }
+
+  /* Fade In Up Animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeInUp {
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+
+  /* Stagger animation delays */
+  .animate-fadeInUp:nth-child(1) {
+    animation-delay: 0ms;
+  }
+
+  .animate-fadeInUp:nth-child(2) {
+    animation-delay: 100ms;
+  }
+
+  .animate-fadeInUp:nth-child(3) {
+    animation-delay: 200ms;
+  }
+
+  .animate-fadeInUp:nth-child(4) {
+    animation-delay: 300ms;
+  }
+
+  /* Fade In Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.2s ease-out forwards;
+  }
+
+  /* Scale In Animation */
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-scaleIn {
+    animation: scaleIn 0.2s ease-out forwards;
+  }
+
+  /* Slide Up Animation */
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slideUp {
+    animation: slideUp 0.3s ease-out forwards;
+  }
+
+  /* Slide In From Right */
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-slideInRight {
+    animation: slideInRight 0.3s ease-out forwards;
+  }
+
+  /* Glow Effect for AI Components */
+  .glow-aurora {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+
+  .glow-sunset {
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.3);
+  }
+
+  /* Card Lift Hover */
+  .card-lift {
+    @apply transition-all duration-200 ease-out;
+  }
+
+  .card-lift:hover {
+    @apply -translate-y-1 shadow-lg;
+  }
+
+  /* Icon Glow Hover */
+  .icon-glow:hover {
+    filter: drop-shadow(0 0 8px currentColor);
+    @apply transition-all duration-200;
+  }
+
+  /* Slide In Animation (for toasts) */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(100%) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }
+
+  .animate-slideIn {
+    animation: slideIn 0.3s ease-out forwards;
+  }
+
+  /* Slow Pulse Animation for AI Logo */
+  @keyframes pulse-slow {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.9;
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 3s ease-in-out infinite;
+  }
+
+  /* Luxury Dashboard Utilities */
+
+  /* Premium Glass Card Effect */
+  .luxury-glass {
+    @apply bg-white/70 backdrop-blur-xl;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow:
+      0 4px 24px -1px rgba(0, 0, 0, 0.05),
+      0 0 1px 0 rgba(0, 0, 0, 0.08),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.9);
+  }
+
+  .luxury-glass:hover {
+    box-shadow:
+      0 8px 32px -1px rgba(0, 0, 0, 0.08),
+      0 0 1px 0 rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.95);
+  }
+
+  /* Dark Luxury Glass */
+  .luxury-glass-dark {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(45, 45, 45, 0.9) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+      0 4px 32px -1px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  }
+
+  /* Premium Card Hover */
+  .luxury-card-hover {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  .luxury-card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 20px 40px -15px rgba(165, 120, 101, 0.15),
+      0 8px 16px -8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Gold Accent Gradient */
+  .gold-gradient {
+    background: linear-gradient(135deg, #CDB261 0%, #E8D5A3 50%, #CDB261 100%);
+  }
+
+  .gold-text {
+    background: linear-gradient(135deg, #CDB261 0%, #E8D5A3 50%, #CDB261 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Premium Border Gradient */
+  .luxury-border {
+    position: relative;
+  }
+
+  .luxury-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(205, 178, 97, 0.3), rgba(165, 120, 101, 0.2), rgba(205, 178, 97, 0.3));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* Shimmer Animation */
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s ease-in-out infinite;
+  }
+
+  /* Float Animation */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  /* Glow Pulse */
+  @keyframes glowPulse {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(165, 120, 101, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(165, 120, 101, 0.4);
+    }
+  }
+
+  .animate-glow-pulse {
+    animation: glowPulse 3s ease-in-out infinite;
+  }
+
+  /* Premium Skeleton */
+  .luxury-skeleton {
+    background: linear-gradient(
+      90deg,
+      rgba(165, 120, 101, 0.08) 0%,
+      rgba(205, 178, 97, 0.12) 50%,
+      rgba(165, 120, 101, 0.08) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s ease-in-out infinite;
+  }
+
+  /* Spotlight Effect - Disabled */
+  .spotlight {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .spotlight::after {
+    display: none;
+  }
+
+  .spotlight:hover::after {
+    display: none;
+  }
+
+  /* Luxury Gradient Background */
+  .luxury-bg {
+    background:
+      radial-gradient(ellipse at 0% 0%, rgba(205, 178, 97, 0.05) 0%, transparent 50%),
+      radial-gradient(ellipse at 100% 0%, rgba(165, 120, 101, 0.05) 0%, transparent 50%),
+      radial-gradient(ellipse at 100% 100%, rgba(92, 155, 164, 0.03) 0%, transparent 50%),
+      linear-gradient(180deg, #FAF8F6 0%, #F5F1EE 100%);
+  }
+
+  /* Counter Animation */
+  @keyframes countUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-countUp {
+    animation: countUp 0.6s ease-out forwards;
+  }
+
+  /* Elegant Divider */
+  .luxury-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(165, 120, 101, 0.3), transparent);
+  }
+
+  /* Dashboard Gradient Background */
+  .dashboard-gradient-bg {
+    background:
+      radial-gradient(ellipse at 10% 0%, rgba(165, 120, 101, 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 95% 5%, rgba(205, 178, 97, 0.04) 0%, transparent 45%),
+      radial-gradient(ellipse at 85% 95%, rgba(92, 155, 164, 0.03) 0%, transparent 50%),
+      radial-gradient(ellipse at 5% 85%, rgba(78, 88, 64, 0.03) 0%, transparent 50%),
+      linear-gradient(180deg, #F8F6F4 0%, #F8F6F4 100%);
+    background-attachment: fixed;
+  }
+
+  /* Glimmora Admin Background */
+  .glimmora-admin-bg {
+    background: #F8F6F4;
+  }
+
+  /* Glimmora V2 Glass Cards */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 0 0 1px rgba(232, 222, 210, 0.9);
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: translateY(-1px);
+  }
+
+  .glass-card-solid {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.08);
+  }
+
+  .glass-subtle {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  /* Section Title - Glimmora V2 */
+  .section-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #A57B65;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(165, 123, 101, 0.2);
+  }
+
+  /* Bar Chart Animation */
+  .bar-animate {
+    animation: barGrow 0.8s ease-out forwards;
+    transform-origin: bottom;
+  }
+
+  @keyframes barGrow {
+    from { transform: scaleY(0); }
+    to { transform: scaleY(1); }
+  }
+
+  /* Circle Chart Animation */
+  .circle-animate {
+    animation: circleGrow 1s ease-out forwards;
+  }
+
+  @keyframes circleGrow {
+    from { stroke-dashoffset: 251.33; }
+  }
+
+  /* Line Chart Animation */
+  .line-animate {
+    animation: lineDraw 1.5s ease-out forwards;
+  }
+
+  @keyframes lineDraw {
+    from { stroke-dashoffset: 1000; }
+    to { stroke-dashoffset: 0; }
+  }
+
+  /* Gauge Fill Animation */
+  .gauge-fill {
+    transition: stroke-dashoffset 1s ease-out;
+  }
+
+  /* Metric Card */
+  .metric-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(30px) saturate(160%);
+    -webkit-backdrop-filter: blur(30px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 200ms ease;
+  }
+
+  .metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(31, 38, 135, 0.08);
+  }
+
+  /* Action Card (Terra gradient) */
+  .action-card {
+    background: linear-gradient(135deg, rgba(165, 123, 101, 0.92) 0%, rgba(139, 100, 80, 0.95) 100%);
+    box-shadow: 0 8px 24px rgba(165, 123, 101, 0.25);
+    transition: all 300ms ease;
+  }
+
+  .action-card:hover {
+    box-shadow: 0 12px 32px rgba(165, 123, 101, 0.35);
+    transform: translateY(-2px);
+  }
+
+  /* Bento Grid */
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+  }
+
+  /* Pulse Dot Animation */
+  .pulse-dot {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  /* Premium Input Focus */
+  .luxury-focus:focus {
+    outline: none;
+    box-shadow:
+      0 0 0 2px rgba(165, 120, 101, 0.1),
+      0 0 0 4px rgba(165, 120, 101, 0.05);
+    border-color: rgba(165, 120, 101, 0.4);
+  }
+
+  /* Slide In From Left - For drawers */
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-slideInLeft {
+    animation: slideInLeft 0.3s ease-out forwards;
+  }
+
+  /* Enhanced Slide In From Right - For drawers */
+  @keyframes slideInRightDrawer {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-slideInRightDrawer {
+    animation: slideInRightDrawer 0.3s ease-out forwards;
+  }
+}
+/* Remove default search clear button */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* ── RESPONSIVE MOBILE / TABLET GLOBAL FIXES ── */
+
+/* iOS zoom prevention: inputs must be ≥ 16px to prevent auto-zoom on focus */
+@media (max-width: 743px) {
+  input, select, textarea {
+    font-size: max(16px, 1em) !important;
+  }
+}
+
+/* Prevent horizontal overflow on all devices */
+body {
+  overflow-x: hidden;
+}
+
+/* Touch targets: ensure minimum 44px tap area on touch screens */
+@media (pointer: coarse) {
+  button:not([data-no-touch-target]),
+  a:not([data-no-touch-target]),
+  [role="button"]:not([data-no-touch-target]) {
+    min-height: 44px;
+  }
+}
+
+/* Responsive table scrolling utility */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Mobile-friendly modal utility */
+@media (max-width: 743px) {
+  .modal-mobile-full {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+}
+
+/* Print-only-the-bill utility.
+ * When printing, hide everything on the page except the element marked
+ * `.print-area`, and lift it to the top-left so no modal chrome,
+ * scrollbars, overlay, or browser header/footer artifacts come through. */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .print-area,
+  .print-area * {
+    visibility: visible;
+  }
+
+  .print-area {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 16px !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  /* Elements that should never appear on the printed bill */
+  .no-print {
+    display: none !important;
+  }
+}

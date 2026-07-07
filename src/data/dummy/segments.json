@@ -1,0 +1,44 @@
+[
+  {
+    "segment": "Corporate",
+    "value": 420000,
+    "bookings": 85,
+    "avgRate": 8500,
+    "color": "#A57865"
+  },
+  {
+    "segment": "OTA",
+    "value": 380000,
+    "bookings": 72,
+    "avgRate": 7200,
+    "color": "#5C9BA4"
+  },
+  {
+    "segment": "Direct Web",
+    "value": 345000,
+    "bookings": 58,
+    "avgRate": 8200,
+    "color": "#4E5840"
+  },
+  {
+    "segment": "Travel Agent",
+    "value": 285000,
+    "bookings": 45,
+    "avgRate": 7800,
+    "color": "#CDB261"
+  },
+  {
+    "segment": "VIP",
+    "value": 265000,
+    "bookings": 28,
+    "avgRate": 12500,
+    "color": "#C8B29D"
+  },
+  {
+    "segment": "Walk-in",
+    "value": 125000,
+    "bookings": 22,
+    "avgRate": 6800,
+    "color": "#9E9891"
+  }
+]

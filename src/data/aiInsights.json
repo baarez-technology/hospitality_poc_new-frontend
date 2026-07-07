@@ -1,0 +1,62 @@
+[
+  {
+    "id": "i1",
+    "category": "Operations",
+    "title": "Housekeeping Delay",
+    "description": "10 rooms waiting over 3 hours for cleaning",
+    "impact": "+10%",
+    "confidence": "96%",
+    "severity": "urgent",
+    "timestamp": "1 min ago"
+  },
+  {
+    "id": "i2",
+    "category": "Revenue",
+    "title": "Revenue Projection",
+    "description": "Weekend revenue projected to exceed target by 18%",
+    "impact": "+18%",
+    "confidence": "89%",
+    "severity": "medium",
+    "timestamp": "45 min ago"
+  },
+  {
+    "id": "i3",
+    "category": "Guest Experience",
+    "title": "VIP Arrival Today",
+    "description": "3 VIP guests arriving today with special requests",
+    "impact": null,
+    "confidence": "92%",
+    "severity": "low",
+    "timestamp": "5 min ago"
+  },
+  {
+    "id": "i4",
+    "category": "Distribution",
+    "title": "OTA Dependency Alert",
+    "description": "High OTA dependency: 52% of bookings from third parties",
+    "impact": "-\u20b91,94,220",
+    "confidence": "94%",
+    "severity": "high",
+    "timestamp": "20 min ago"
+  },
+  {
+    "id": "i5",
+    "category": "Forecast",
+    "title": "Weekend Demand Surge",
+    "description": "Occupancy forecast trending +12% for next weekend",
+    "impact": "+12%",
+    "confidence": "85%",
+    "severity": "medium",
+    "timestamp": "10 min ago"
+  },
+  {
+    "id": "i6",
+    "category": "Maintenance",
+    "title": "Workload Increase",
+    "description": "Maintenance workload has increased by 14% this week",
+    "impact": "+14%",
+    "confidence": "82%",
+    "severity": "high",
+    "timestamp": "30 min ago"
+  }
+]

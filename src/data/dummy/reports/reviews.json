@@ -1,0 +1,17 @@
+[
+  { "date": "2024-11-04", "source": "Booking.com", "rating": 4.5, "sentiment": 82, "review": "Excellent stay! The staff was very attentive and the room was spotless.", "guest": "John M." },
+  { "date": "2024-11-04", "source": "Google", "rating": 3.0, "sentiment": 48, "review": "Check-in took too long. Room was okay but service could be better.", "guest": "Sarah C." },
+  { "date": "2024-11-03", "source": "Expedia", "rating": 5.0, "sentiment": 95, "review": "Perfect for business travel. Fast WiFi and great breakfast.", "guest": "Rajesh K." },
+  { "date": "2024-11-03", "source": "Tripadvisor", "rating": 2.0, "sentiment": 28, "review": "Disappointing. Room wasn't ready and bathroom had issues.", "guest": "Emily W." },
+  { "date": "2024-11-02", "source": "Booking.com", "rating": 4.0, "sentiment": 71, "review": "Good value for money. Clean rooms and friendly staff.", "guest": "Michael B." },
+  { "date": "2024-11-02", "source": "Google", "rating": 4.8, "sentiment": 88, "review": "Beautiful anniversary celebration! Romantic dinner was amazing.", "guest": "Priya S." },
+  { "date": "2024-11-01", "source": "Agoda", "rating": 3.5, "sentiment": 58, "review": "Room smaller than expected. WiFi issues but gym was great.", "guest": "David L." },
+  { "date": "2024-11-01", "source": "Tripadvisor", "rating": 4.2, "sentiment": 75, "review": "Heritage architecture is stunning. Minor elevator issues.", "guest": "Ananya R." },
+  { "date": "2024-10-31", "source": "Booking.com", "rating": 1.5, "sentiment": 18, "review": "Worst experience. Lost luggage and room smelled of smoke.", "guest": "Thomas A." },
+  { "date": "2024-10-31", "source": "Expedia", "rating": 4.7, "sentiment": 86, "review": "Luxury at its finest! Butler service was impeccable.", "guest": "Lisa M." },
+  { "date": "2024-10-30", "source": "Google", "rating": 4.3, "sentiment": 78, "review": "Consistent quality. Always reliable for business stays.", "guest": "Vikram P." },
+  { "date": "2024-10-30", "source": "Tripadvisor", "rating": 3.8, "sentiment": 64, "review": "Good but expensive. Pool and location are highlights.", "guest": "Jennifer W." },
+  { "date": "2024-10-29", "source": "Agoda", "rating": 4.9, "sentiment": 92, "review": "Hidden gem! Attention to detail is remarkable.", "guest": "Arjun M." },
+  { "date": "2024-10-29", "source": "Booking.com", "rating": 4.4, "sentiment": 79, "review": "Family friendly. Kids club was great. More kids menu options needed.", "guest": "Nancy T." },
+  { "date": "2024-10-28", "source": "Google", "rating": 2.5, "sentiment": 35, "review": "Not worth premium price. Slow room service and valet scratched car.", "guest": "Chris D." }
+]

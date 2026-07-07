@@ -1,0 +1,51 @@
+# DigitalOcean App Platform spec — jpark-inn-frontend (static site)
+# Docs: https://docs.digitalocean.com/products/app-platform/reference/app-spec/
+#
+# Deploy with the DO CLI:
+#   doctl apps create --spec .do/app.yaml          # first time
+#   doctl apps update <APP_ID> --spec .do/app.yaml # subsequent updates
+# Or in the DO console: Apps -> Create -> "Import from App Spec".
+#
+# IMPORTANT: VITE_* vars are inlined into the bundle at BUILD TIME (Vite),
+# so they MUST use `scope: BUILD_TIME`. Changing them requires a rebuild.
+name: jpark-inn-frontend
+region: blr   # match your backend droplet's region for lowest latency (nyc, fra, sgp, ams, sfo, blr...)
+
+static_sites:
+  - name: web
+    # --- Source: GitHub (auto-deploy on push to main) ---
+    github:
+      repo: baarez-technology/jpark-inn-frontend
+      branch: main
+      deploy_on_push: true
+
+    # --- Build ---
+    # Node version is pinned via package.json "engines" and .node-version (20.19.1).
+    build_command: npm ci && npm run build:skip-check
+    output_dir: dist
+
+    # --- SPA routing (replaces vercel.json rewrites) ---
+    # Serve index.html for any unmatched path so client-side routes work.
+    index_document: index.html
+    catchall_document: index.html
+
+    # --- Routes ---
+    routes:
+      - path: /
+
+    # --- Build-time environment variables (inlined by Vite) ---
+    envs:
+      - key: VITE_API_URL
+        scope: BUILD_TIME
+        # Backend on DO droplet 168.144.30.61, fronted by nginx + Let's Encrypt
+        # TLS for the duckdns domain. Browser-trusted HTTPS, so no mixed-content issue.
+        value: https://jparkmain.duckdns.org
+      - key: VITE_API_TIMEOUT
+        scope: BUILD_TIME
+        value: "30000"
+      - key: VITE_ENV
+        scope: BUILD_TIME
+        value: production
+      - key: VITE_HOTEL_CODE
+        scope: BUILD_TIME
+        value: glimmora

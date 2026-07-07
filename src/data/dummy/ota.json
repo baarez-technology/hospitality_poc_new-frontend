@@ -1,0 +1,32 @@
+{
+  "google": {
+    "rating": 4.3,
+    "reviews": 1247,
+    "trend": 0.1,
+    "logo": "G"
+  },
+  "booking": {
+    "rating": 4.5,
+    "reviews": 892,
+    "trend": 0.2,
+    "logo": "B"
+  },
+  "expedia": {
+    "rating": 4.1,
+    "reviews": 456,
+    "trend": -0.1,
+    "logo": "E"
+  },
+  "tripadvisor": {
+    "rating": 4.2,
+    "reviews": 2103,
+    "trend": 0.0,
+    "logo": "T"
+  },
+  "agoda": {
+    "rating": 4.4,
+    "reviews": 678,
+    "trend": 0.3,
+    "logo": "A"
+  }
+}

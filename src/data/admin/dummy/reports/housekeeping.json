@@ -1,0 +1,22 @@
+[
+  { "room": "101", "status": "Clean", "staff": "Lakshmi", "time": 22, "notes": "Ready for check-in", "floor": 1 },
+  { "room": "102", "status": "Dirty", "staff": "Mani", "time": null, "notes": "Guest checked out at 10am", "floor": 1 },
+  { "room": "103", "status": "In Progress", "staff": "Priya", "time": 18, "notes": "Deep cleaning requested", "floor": 1 },
+  { "room": "104", "status": "Clean", "staff": "Ravi", "time": 25, "notes": "VIP turndown", "floor": 1 },
+  { "room": "105", "status": "Dirty", "staff": "Lakshmi", "time": null, "notes": "Late checkout", "floor": 1 },
+  { "room": "201", "status": "Clean", "staff": "Kumar", "time": 20, "notes": "", "floor": 2 },
+  { "room": "202", "status": "Clean", "staff": "Mani", "time": 24, "notes": "Extra amenities added", "floor": 2 },
+  { "room": "203", "status": "Delayed", "staff": "Priya", "time": 45, "notes": "Maintenance issue reported", "floor": 2 },
+  { "room": "204", "status": "Dirty", "staff": "Ravi", "time": null, "notes": "Standard turnover", "floor": 2 },
+  { "room": "205", "status": "In Progress", "staff": "Kumar", "time": 15, "notes": "Almost complete", "floor": 2 },
+  { "room": "301", "status": "Clean", "staff": "Lakshmi", "time": 28, "notes": "Suite deep cleaned", "floor": 3 },
+  { "room": "302", "status": "Dirty", "staff": "Mani", "time": null, "notes": "Checkout at 11am", "floor": 3 },
+  { "room": "303", "status": "Clean", "staff": "Priya", "time": 21, "notes": "", "floor": 3 },
+  { "room": "304", "status": "In Progress", "staff": "Ravi", "time": 12, "notes": "Final touches", "floor": 3 },
+  { "room": "305", "status": "Clean", "staff": "Kumar", "time": 23, "notes": "Inspected", "floor": 3 },
+  { "room": "401", "status": "Dirty", "staff": "Lakshmi", "time": null, "notes": "Group checkout", "floor": 4 },
+  { "room": "402", "status": "Clean", "staff": "Mani", "time": 26, "notes": "Presidential suite", "floor": 4 },
+  { "room": "403", "status": "Delayed", "staff": "Priya", "time": 52, "notes": "Guest complaint - extra cleaning", "floor": 4 },
+  { "room": "404", "status": "Clean", "staff": "Ravi", "time": 19, "notes": "", "floor": 4 },
+  { "room": "405", "status": "In Progress", "staff": "Kumar", "time": 8, "notes": "Just started", "floor": 4 }
+]

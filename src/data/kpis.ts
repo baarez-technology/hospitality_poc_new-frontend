@@ -1,0 +1,38 @@
+export const kpis = [
+  {
+    id: 1,
+    title: 'Occupancy Rate',
+    value: '87.5%',
+    change: '+5.2%',
+    trend: 'up',
+    icon: 'bed',
+    description: 'Current occupancy across all rooms',
+  },
+  {
+    id: 2,
+    title: 'Revenue Today',
+    value: '\u20B920,48,000',
+    change: '+12.8%',
+    trend: 'up',
+    icon: 'dollar-sign',
+    description: 'Total revenue generated today',
+  },
+  {
+    id: 3,
+    title: 'Check-ins Today',
+    value: '18',
+    change: '-3',
+    trend: 'down',
+    icon: 'user-check',
+    description: 'Expected arrivals for today',
+  },
+  {
+    id: 4,
+    title: 'Pending Requests',
+    value: '7',
+    change: '+2',
+    trend: 'neutral',
+    icon: 'alert-circle',
+    description: 'Requests awaiting action',
+  },
+];

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "hotel": "The Taj Palace",
+    "today": 14200,
+    "next7": 13800,
+    "rating": 4.8,
+    "distance": "1.2 km"
+  },
+  {
+    "id": 2,
+    "hotel": "Hilton Grand",
+    "today": 12500,
+    "next7": 11800,
+    "rating": 4.6,
+    "distance": "0.8 km"
+  },
+  {
+    "id": 3,
+    "hotel": "ITC Maurya",
+    "today": 15800,
+    "next7": 15200,
+    "rating": 4.9,
+    "distance": "2.1 km"
+  },
+  {
+    "id": 4,
+    "hotel": "Oberoi",
+    "today": 18500,
+    "next7": 17800,
+    "rating": 4.9,
+    "distance": "3.5 km"
+  },
+  {
+    "id": 5,
+    "hotel": "Marriott Downtown",
+    "today": 11200,
+    "next7": 10800,
+    "rating": 4.5,
+    "distance": "1.8 km"
+  },
+  {
+    "id": 6,
+    "hotel": "Hyatt Regency",
+    "today": 13500,
+    "next7": 12900,
+    "rating": 4.7,
+    "distance": "2.4 km"
+  }
+]
