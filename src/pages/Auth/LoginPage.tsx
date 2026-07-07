@@ -50,7 +50,7 @@ export function LoginPage() {
           <Link to="/" className="inline-flex items-center mb-4">
             <img
               src="/logo.png"
-              alt="J Park Inn"
+              alt="Hotel Management"
               className="h-8 w-auto"
             />
           </Link>

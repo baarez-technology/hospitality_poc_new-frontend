@@ -5,7 +5,7 @@ const STORAGE_KEY = 'glimmora_settings';
 // Default settings structure
 export const defaultSettings = {
   hotelInfo: {
-    name: 'J Park Inn',
+    name: 'Hotel Management',
     address: '503 Orchid Sadashivpuram, Moriwali Pada, Ambernath, Kalyan, Thane - 421501, Maharashtra',
     timezone: 'Asia/Kolkata',
     currency: 'INR',

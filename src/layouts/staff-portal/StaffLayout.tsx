@@ -84,7 +84,7 @@ export default function StaffLayout({ children }: StaffLayoutProps) {
               <Menu className="w-5 h-5" />
             </button>
             <div className="ml-3">
-              <h1 className="text-sm font-semibold text-neutral-800">J Park Inn</h1>
+              <h1 className="text-sm font-semibold text-neutral-800">Hotel Management</h1>
               <p className="text-[10px] text-neutral-400">Staff Portal</p>
             </div>
           </div>

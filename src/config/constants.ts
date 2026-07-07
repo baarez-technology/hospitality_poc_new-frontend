@@ -1,4 +1,4 @@
-export const APP_NAME = 'J Park Inn Hotel';
+export const APP_NAME = 'Hotel Management';
 export const APP_VERSION = '2.0.0';
 export const APP_TAGLINE = 'Your Comfort, Our Priority';
 
@@ -188,4 +188,4 @@ export const CONTACT_INFO = {
   },
 } as const;
 
-export const ABOUT_TEXT = 'J Park Inn Hotel offers comfortable accommodation and warm hospitality in the heart of Palvancha. Our property provides well-appointed rooms and personalized service to ensure a pleasant stay for all our guests.';
+export const ABOUT_TEXT = 'Hotel Management offers comfortable accommodation and warm hospitality in the heart of Palvancha. Our property provides well-appointed rooms and personalized service to ensure a pleasant stay for all our guests.';

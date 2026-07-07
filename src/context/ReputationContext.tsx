@@ -216,7 +216,7 @@ export function ReputationProvider({ children }: { children: React.ReactNode }) 
       delay: '3h',
       language: 'en',
       templates: {
-        positive: "Thank you so much for your wonderful review, {guest}! We're thrilled you enjoyed your stay at J Park Inn. We look forward to welcoming you back soon!",
+        positive: "Thank you so much for your wonderful review, {guest}! We're thrilled you enjoyed your stay at Hotel Management. We look forward to welcoming you back soon!",
         neutral: "Thank you for your feedback, {guest}. We appreciate you taking the time to share your experience. Your insights help us improve our services.",
         negative: "Dear {guest}, we sincerely apologize for not meeting your expectations. Your feedback is valuable, and we're taking immediate steps to address your concerns. Please contact our guest relations team so we can make this right."
       }

@@ -233,7 +233,7 @@ export const AGIChatProvider = ({ children }: AGIChatProviderProps) => {
 
   const showLoginRequiredMessage = () => {
     const aiName = hotelInfo?.ai_assistant_name || 'Aria';
-    const hotelName = hotelInfo?.hotel_name || 'J Park Inn';
+    const hotelName = hotelInfo?.hotel_name || 'Hotel Management';
 
     const welcomeMessage: AGIMessage = {
       id: `welcome_${Date.now()}`,
@@ -252,7 +252,7 @@ export const AGIChatProvider = ({ children }: AGIChatProviderProps) => {
   const showWelcomeMessage = () => {
     const guestName = user?.first_name || guestContext?.guestName || 'there';
     const aiName = hotelInfo?.ai_assistant_name || 'Aria';
-    const hotelName = hotelInfo?.hotel_name || 'J Park Inn';
+    const hotelName = hotelInfo?.hotel_name || 'Hotel Management';
 
     let content = `Hello ${guestName}! I'm ${aiName}, your AI concierge at ${hotelName}.\n\n`;
     content += `I can help you with:\n`;

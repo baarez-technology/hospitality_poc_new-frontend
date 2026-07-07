@@ -1,6 +1,6 @@
 /**
  * GuestBillModal — Shows the itemized guest bill for a booking.
- * Formatted as a premium J Park Inn TAX INVOICE with chronological ledger.
+ * Formatted as a premium Hotel Management TAX INVOICE with chronological ledger.
  */
 
 import { useState, useEffect, useMemo } from 'react';
@@ -686,9 +686,9 @@ export default function GuestBillModal({ isOpen, bookingId, guestName, booking, 
                   <h1 className="text-xl font-bold tracking-wider text-neutral-850 uppercase">Tax Invoice</h1>
                 </div>
                 <div className="w-2/4 text-center">
-                  {/* <h2 className="text-[10px] font-bold tracking-[0.25em] text-red-400 uppercase">J Park Inn</h2> */}
+                  {/* <h2 className="text-[10px] font-bold tracking-[0.25em] text-red-400 uppercase">Hotel Management</h2> */}
                   <h3 className="text-base font-bold tracking-wide text-neutral-800 uppercase mt-0.5 animate-pulse">
-                    {hotel.name || 'J Park Inn Hotel'}
+                    {hotel.name || 'Hotel Management'}
                   </h3>
                   <p className="text-[9px] text-neutral-500 mt-1 leading-relaxed">
                     {hotelAddressLine || 'Palvancha, Telangana, India'}
@@ -703,7 +703,7 @@ export default function GuestBillModal({ isOpen, bookingId, guestName, booking, 
                   {logoSrc && (
                     <img
                       src={logoSrc}
-                      alt={`${hotel.name || 'J Park Inn Hotel'} logo`}
+                      alt={`${hotel.name || 'Hotel Management'} logo`}
                       className="max-h-10 max-w-full object-contain"
                       style={{ printColorAdjust: 'exact', WebkitPrintColorAdjust: 'exact' } as any}
                     />
@@ -955,7 +955,7 @@ export default function GuestBillModal({ isOpen, bookingId, guestName, booking, 
                 <div className="text-right flex flex-col items-end justify-between space-y-8">
                   <p className="invisible">Spacer</p>
                   <div className="border-t border-neutral-400 w-52 pt-1.5 text-center">
-                    <p className="font-bold text-neutral-800 uppercase tracking-wider">For {hotel.name || 'J Park Inn Hotel'}</p>
+                    <p className="font-bold text-neutral-800 uppercase tracking-wider">For {hotel.name || 'Hotel Management'}</p>
                     <p className="text-[8.5px] text-neutral-500 mt-0.5">Authorised Signatory / Cashier</p>
                   </div>
                 </div>

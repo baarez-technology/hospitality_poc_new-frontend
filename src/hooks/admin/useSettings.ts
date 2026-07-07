@@ -7,7 +7,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { loadGeneralSettings, saveGeneralSettings, loadBilling, saveBilling } from '@/utils/admin/settingsStorage';
 
 const defaultGeneralSettings = {
-  hotelName: 'J Park Inn Hotel',
+  hotelName: 'Hotel Management',
   tagline: 'Your Comfort, Our Priority',
   currency: 'INR',
   timezone: 'Asia/Kolkata',

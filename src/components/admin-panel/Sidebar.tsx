@@ -67,7 +67,7 @@ const navCategories = [
 
 const Sidebar = () => {
   const { generalSettings } = useSettingsContext();
-  const hotelName = generalSettings?.hotelName || 'J Park Inn Hotel';
+  const hotelName = generalSettings?.hotelName || 'Hotel Management';
   const customLogo = generalSettings?.branding?.logo;
   const { user } = useAuth();
 
@@ -93,7 +93,7 @@ const Sidebar = () => {
             </div>
           ) : (
             <div className="w-12 h-12 bg-gradient-to-br from-[#A57865] via-[#8E6554] to-[#A57865] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 group-hover:rotate-3 transition-all duration-300 p-2 shadow-md">
-              <img src={GlimmoraLogo} alt="J Park Inn Logo" className="w-full h-full object-contain" />
+              <img src={GlimmoraLogo} alt="Hotel Management Logo" className="w-full h-full object-contain" />
             </div>
           )}
           <div>

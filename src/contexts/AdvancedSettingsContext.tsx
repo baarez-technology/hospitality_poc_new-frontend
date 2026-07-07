@@ -91,7 +91,7 @@ export function AdvancedSettingsProvider({ children }: { children: ReactNode }) 
 
   // Branding Settings
   const [brandingSettings, setBrandingSettings] = useState<BrandingSettings>({
-    hotelName: 'J Park Inn Hotel',
+    hotelName: 'Hotel Management',
     logo: '/logo.png',
     favicon: '/favicon.ico',
     primaryColor: '#0052CC',
@@ -99,7 +99,7 @@ export function AdvancedSettingsProvider({ children }: { children: ReactNode }) 
     accentColor: '#FF5630',
     fontHeading: 'Inter',
     fontBody: 'Inter',
-    footerText: '© 2024 J Park Inn Hotel. All rights reserved.',
+    footerText: '© 2024 Hotel Management. All rights reserved.',
   });
 
   // Email Templates

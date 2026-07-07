@@ -5,7 +5,7 @@
 
 // General Settings
 export const generalSettings = {
-  hotelName: "J Park Inn",
+  hotelName: "Hotel Management",
   logo: "/logo.png",
   timezone: "Asia/Kolkata",
   currency: "INR",

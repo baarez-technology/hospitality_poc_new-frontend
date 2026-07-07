@@ -9,7 +9,7 @@ import { loadGeneralSettings, saveGeneralSettings, loadBilling, saveBilling } fr
 import { hotelSettingsService, HotelSettingsResponse, HotelSettingsUpdate } from '../api/services/hotel-settings.service';
 
 const defaultGeneralSettings = {
-  hotelName: 'J Park Inn Hotel',
+  hotelName: 'Hotel Management',
   tagline: 'Your Comfort, Our Priority',
   currency: 'INR',
   timezone: 'Asia/Kolkata',

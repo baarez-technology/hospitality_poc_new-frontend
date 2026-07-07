@@ -25,7 +25,7 @@ import {
   TrendingUp,
   Zap,
   PieChart,
-  // Globe, // TODO: uncomment when Competitors is implemented
+  Globe,
   Activity,
   Brain,
   Search,
@@ -88,22 +88,22 @@ const navCategories = [
       { name: 'Inventory', icon: Package, to: '/admin/inventory' },
     ]
   },
-  // {
-  //   id: 'finance',
-  //   name: 'Finance',
-  //   icon: DollarSign,
-  //   items: [
-  //     { name: 'Night Audit', icon: FileBarChart, to: '/admin/night-audit' },
-  //     { name: 'POS Closure', icon: Store, to: '/admin/pos-closure' },
-  //     { name: 'Audit Pack', icon: ClipboardCheck, to: '/admin/audit-pack' },
-  //     { name: 'Cashier Sessions', icon: CreditCard, to: '/admin/cashier-sessions' },
-  //     { name: 'Corporate Accounts', icon: Building2, to: '/admin/corporate-accounts' },
-  //     { name: 'AR Ledger', icon: Receipt, to: '/admin/ar-ledger' },
-  //     { name: 'Paymaster', icon: Wallet, to: '/admin/paymaster' },
-  //     { name: 'Transaction Codes', icon: Hash, to: '/admin/transaction-codes' },
-  //     { name: 'Pre-Auth Holds', icon: Shield, to: '/admin/preauth-holds' },
-  //   ]
-  // },
+  {
+    id: 'finance',
+    name: 'Finance',
+    icon: DollarSign,
+    items: [
+      { name: 'Night Audit', icon: FileBarChart, to: '/admin/night-audit' },
+      { name: 'POS Closure', icon: Store, to: '/admin/pos-closure' },
+      { name: 'Audit Pack', icon: ClipboardCheck, to: '/admin/audit-pack' },
+      { name: 'Cashier Sessions', icon: CreditCard, to: '/admin/cashier-sessions' },
+      { name: 'Corporate Accounts', icon: Building2, to: '/admin/corporate-accounts' },
+      { name: 'AR Ledger', icon: Receipt, to: '/admin/ar-ledger' },
+      { name: 'Paymaster', icon: Wallet, to: '/admin/paymaster' },
+      { name: 'Transaction Codes', icon: Hash, to: '/admin/transaction-codes' },
+      { name: 'Pre-Auth Holds', icon: Shield, to: '/admin/preauth-holds' },
+    ]
+  },
   {
     id: 'cms',
     name: 'CMS',
@@ -114,47 +114,46 @@ const navCategories = [
       { name: 'Promotions', icon: Gift, to: '/admin/cms/promotions' },
     ]
   },
-  // {
-  //   id: 'channel',
-  //   name: 'Channels',
-  //   icon: Radio,
-  //   items: [
-  //     { name: 'Dashboard', icon: LayoutDashboard, to: '/admin/channel-manager', end: true },
-  //     { name: 'OTA Connections', icon: Wifi, to: '/admin/channel-manager/ota' },
-  //     { name: 'Room Mapping', icon: Link2, to: '/admin/channel-manager/mapping' },
-  //     { name: 'Rate Sync', icon: DollarSign, to: '/admin/channel-manager/rate-sync' },
-  //     { name: 'Restrictions', icon: Ban, to: '/admin/channel-manager/restrictions' },
-  //     { name: 'Promotions', icon: Gift, to: '/admin/channel-manager/promotions' },
-  //     { name: 'Sync Logs', icon: RefreshCw, to: '/admin/channel-manager/logs' },
-  //   ]
-  // },
-  
-  // {
-  //   id: 'revenue',
-  //   name: 'Revenue',
-  //   icon: BarChart2,
-  //   items: [
-  //     { name: 'Dashboard', icon: TrendingUp, to: '/admin/revenue', end: true },
-  //     { name: 'Rate Calendar', icon: Calendar, to: '/admin/revenue/calendar' },
-  //     { name: 'Pickup Analysis', icon: Activity, to: '/admin/revenue/pickup' },
-  //     { name: 'Demand Forecast', icon: Zap, to: '/admin/revenue/forecast' },
-  //     // { name: 'Competitors', icon: Globe, to: '/admin/revenue/competitors' }, // TODO: uncomment when implemented
-  //     { name: 'Segmentation', icon: PieChart, to: '/admin/revenue/segments' },
-  //     { name: 'Pricing Rules', icon: Settings, to: '/admin/revenue/pricing' },
-  //     { name: 'Revenue Analytics', icon: CreditCard, to: '/admin/revenue/payment-analytics' },
-  //     { name: 'Revenue AI', icon: Brain, to: '/admin/revenue/ai' },
-  //   ]
-  // },
-  // {
-  //   id: 'ai',
-  //   name: 'AI Tools',
-  //   icon: Cpu,
-  //   items: [
-  //     { name: 'Reputation AI', icon: MessageSquare, to: '/admin/ai/reputation' },
-  //     { name: 'CRM AI', icon: Contact, to: '/admin/ai/crm' },
-  //     { name: 'ReConnect AI', icon: Brain, to: '/admin/ai/crm-dashboard' },
-  //   ]
-  // },
+  {
+    id: 'channel',
+    name: 'Channels',
+    icon: Radio,
+    items: [
+      { name: 'Dashboard', icon: LayoutDashboard, to: '/admin/channel-manager', end: true },
+      { name: 'OTA Connections', icon: Wifi, to: '/admin/channel-manager/ota' },
+      { name: 'Room Mapping', icon: Link2, to: '/admin/channel-manager/mapping' },
+      { name: 'Rate Sync', icon: DollarSign, to: '/admin/channel-manager/rate-sync' },
+      { name: 'Restrictions', icon: Ban, to: '/admin/channel-manager/restrictions' },
+      { name: 'Promotions', icon: Gift, to: '/admin/channel-manager/promotions' },
+      { name: 'Sync Logs', icon: RefreshCw, to: '/admin/channel-manager/logs' },
+    ]
+  },
+  {
+    id: 'revenue',
+    name: 'Revenue',
+    icon: BarChart2,
+    items: [
+      { name: 'Dashboard', icon: TrendingUp, to: '/admin/revenue', end: true },
+      { name: 'Rate Calendar', icon: Calendar, to: '/admin/revenue/calendar' },
+      { name: 'Pickup Analysis', icon: Activity, to: '/admin/revenue/pickup' },
+      { name: 'Demand Forecast', icon: Zap, to: '/admin/revenue/forecast' },
+      { name: 'Competitors', icon: Globe, to: '/admin/revenue/competitors' },
+      { name: 'Segmentation', icon: PieChart, to: '/admin/revenue/segments' },
+      { name: 'Pricing Rules', icon: Settings, to: '/admin/revenue/pricing' },
+      { name: 'Revenue Analytics', icon: CreditCard, to: '/admin/revenue/payment-analytics' },
+      { name: 'Revenue AI', icon: Brain, to: '/admin/revenue/ai' },
+    ]
+  },
+  {
+    id: 'ai',
+    name: 'AI Tools',
+    icon: Cpu,
+    items: [
+      { name: 'Reputation AI', icon: MessageSquare, to: '/admin/ai/reputation' },
+      { name: 'CRM AI', icon: Contact, to: '/admin/ai/crm' },
+      { name: 'ReConnect AI', icon: Brain, to: '/admin/ai/crm-dashboard' },
+    ]
+  },
   {
     id: 'analytics',
     name: 'Analytics',
@@ -190,7 +189,7 @@ const Sidebar = ({ isCollapsed, onToggle, renderBrandOnly, renderNavigationOnly,
   const navContainerRef = useRef(null);
 
   // Get hotel name from settings, with fallback
-  const hotelNameFull = generalSettings?.hotelName || 'J Park Inn Hotel';
+  const hotelNameFull = generalSettings?.hotelName || 'Hotel Management';
   // Short brand name for sidebar display (first two words max, or up to 20 chars)
   const hotelName = hotelNameFull.length > 20
     ? hotelNameFull.split(' ').slice(0, 2).join(' ')
@@ -281,7 +280,7 @@ const Sidebar = ({ isCollapsed, onToggle, renderBrandOnly, renderNavigationOnly,
           <div className="flex items-center justify-between">
             <img
               src={customLogo || GlimmoraFullLogo}
-              alt="J Park Inn"
+              alt="Hotel Management"
               className="h-10 object-contain"
             />
             <button
@@ -456,14 +455,14 @@ const Sidebar = ({ isCollapsed, onToggle, renderBrandOnly, renderNavigationOnly,
                 </div>
               ) : (
                 <div className="w-full h-full rounded-xl flex items-center justify-center overflow-hidden">
-                  <img src={GlimmoraLogo} alt="J Park Inn" className="w-full h-full object-contain" />
+                  <img src={GlimmoraLogo} alt="Hotel Management" className="w-full h-full object-contain" />
                 </div>
               )}
             </div>
           ) : (
             <>
               <div className="flex flex-col items-start min-w-0 flex-1">
-                <img src={GlimmoraFullLogo} alt="J Park Inn Hotel" className="h-8 w-auto object-contain" />
+                <img src={GlimmoraFullLogo} alt="Hotel Management" className="h-8 w-auto object-contain" />
                 {/* <div className="w-10 h-px bg-gradient-to-r from-terra-300 to-transparent mt-2" />
                 <h1 className="text-[13px] font-semibold text-terra-700 mt-1.5 tracking-wide truncate max-w-full" title={hotelNameFull}>
                   {hotelName}

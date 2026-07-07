@@ -26,7 +26,7 @@ export function useHotelInfo() {
   const { generalSettings } = useSettingsContext() as any;
 
   return useMemo(() => ({
-    name: generalSettings?.hotelName || 'J Park Inn Hotel',
+    name: generalSettings?.hotelName || 'Hotel Management',
     tagline: generalSettings?.tagline || 'Your Comfort, Our Priority',
     address: generalSettings?.address || defaultAddress,
     phone: generalSettings?.contactPhone || '+91-6300275340',

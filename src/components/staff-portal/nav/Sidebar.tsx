@@ -52,7 +52,7 @@ const Sidebar = ({ isCollapsed, onToggle, renderBrandOnly, renderNavigationOnly 
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
   const settingsContext = useSettingsContext() as any;
   const generalSettings = settingsContext?.generalSettings;
-  const hotelNameFull = generalSettings?.hotelName || 'J Park Inn';
+  const hotelNameFull = generalSettings?.hotelName || 'Hotel Management';
   const hotelName = hotelNameFull.length > 20
     ? hotelNameFull.split(' ').slice(0, 2).join(' ')
     : hotelNameFull;
@@ -197,14 +197,14 @@ const Sidebar = ({ isCollapsed, onToggle, renderBrandOnly, renderNavigationOnly 
                 </div>
               ) : (
                 <div className="w-full h-full rounded-xl flex items-center justify-center overflow-hidden">
-                  <img src={GlimmoraLogo} alt="J Park Inn" className="w-full h-full object-contain" />
+                  <img src={GlimmoraLogo} alt="Hotel Management" className="w-full h-full object-contain" />
                 </div>
               )}
             </div>
           ) : (
             <>
               <div className="flex flex-col items-start min-w-0 flex-1">
-                <img src={GlimmoraFullLogo} alt="J Park Inn Hotel" className="h-8 w-auto object-contain" />
+                <img src={GlimmoraFullLogo} alt="Hotel Management" className="h-8 w-auto object-contain" />
                 {/* <div className="w-10 h-px bg-gradient-to-r from-terra-300 to-transparent mt-2" />
                 <h1 className="text-[13px] font-semibold text-terra-700 mt-1.5 tracking-wide truncate max-w-full" title={hotelNameFull}>
                   {hotelName}
@@ -416,7 +416,7 @@ const Sidebar = ({ isCollapsed, onToggle, renderBrandOnly, renderNavigationOnly 
       {/* Brand Header */}
       <div className="flex items-start justify-between px-5 py-4 border-b border-neutral-100">
         <div className="flex flex-col items-start min-w-0 flex-1">
-          <img src={GlimmoraFullLogo} alt="J Park Inn Hotel" className="h-8 w-auto object-contain" />
+          <img src={GlimmoraFullLogo} alt="Hotel Management" className="h-8 w-auto object-contain" />
           <div className="w-10 h-px bg-gradient-to-r from-terra-300 to-transparent mt-2" />
           <h1 className="text-[13px] font-semibold text-terra-700 mt-1.5 tracking-wide truncate max-w-full" title={hotelNameFull}>
             {hotelName}

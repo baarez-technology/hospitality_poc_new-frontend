@@ -53,7 +53,7 @@ export function AdminProvider({ children }) {
 
   // Hotel Info
   const [hotelInfo] = useState({
-    name: 'J Park Inn Hotel',
+    name: 'Hotel Management',
     totalRooms: 120,
     location: 'Palvancha, Telangana, India',
     rating: 4.8,

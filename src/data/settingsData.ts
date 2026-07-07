@@ -5,12 +5,12 @@
 
 // General Settings
 export const generalSettings = {
-  hotelName: "J Park Inn Hotel",
+  hotelName: "Hotel Management",
   logo: "/logo.png",
   timezone: "Asia/Kolkata",
   currency: "INR",
   primaryContact: {
-    name: "J Park Inn Support",
+    name: "Hotel Management Support",
     email: "info@jparkinn.com",
     phone: "+91-6300275340"
   },
