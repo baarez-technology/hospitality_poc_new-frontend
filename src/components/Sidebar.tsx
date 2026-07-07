@@ -56,7 +56,6 @@ import { useAuth } from '../hooks';
 import { getModuleForRoute, canViewModule, DEFAULT_PERMISSIONS, resolveRolePermissions } from '../config/rolePermissions';
 import type { PermissionMap, StaffRole } from '../config/rolePermissions';
 
-import GlimmoraLogo from '../assets/G white logo.png';
 import GlimmoraFullLogo from '../assets/logo.png';
 
 /**
@@ -454,19 +453,17 @@ const Sidebar = ({ isCollapsed, onToggle, renderBrandOnly, renderNavigationOnly,
                   <img src={customLogo} alt={hotelName} className="w-full h-full object-contain" />
                 </div>
               ) : (
-                <div className="w-full h-full rounded-xl flex items-center justify-center overflow-hidden">
-                  <img src={GlimmoraLogo} alt="Hotel Management" className="w-full h-full object-contain" />
+                <div className="w-full h-full rounded-xl flex items-center justify-center overflow-hidden bg-terra-50 text-terra-700 font-semibold text-sm">
+                  HS
                 </div>
               )}
             </div>
           ) : (
             <>
               <div className="flex flex-col items-start min-w-0 flex-1">
-                <img src={GlimmoraFullLogo} alt="Hotel Management" className="h-8 w-auto object-contain" />
-                {/* <div className="w-10 h-px bg-gradient-to-r from-terra-300 to-transparent mt-2" />
-                <h1 className="text-[13px] font-semibold text-terra-700 mt-1.5 tracking-wide truncate max-w-full" title={hotelNameFull}>
-                  {hotelName}
-                </h1> */}
+                <h1 className="text-lg font-semibold text-neutral-800 tracking-tight truncate max-w-full">
+                  Hotel System
+                </h1>
               </div>
               <button
                 onClick={onToggle}
